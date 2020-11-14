@@ -8,9 +8,9 @@ final class View extends MethodQueryList
 {
     public function gdoTable() { return GDO_User::table(); }
     
-    public function gdoQuery()
+    public function getQuery()
     {
-        return parent::gdoQuery()->where('user_type="member"');
+        return parent::getQuery()->where('user_type="member"');
     }
     
 }
