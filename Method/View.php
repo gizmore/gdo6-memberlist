@@ -13,5 +13,10 @@ final class View extends MethodQueryList
         return parent::getQuery()->where('user_type="member"');
     }
     
+    public function getTitle()
+    {
+        return t('list_memberlist_view', [$this->table->countItems()]);
+    }
+    
 }
 
